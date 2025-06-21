@@ -143,6 +143,27 @@ body {
     margin-top: 20px;
   }
   
+  
+  .footerBox {
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-size: large;
+    background-color: black;
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin-top: 70px;
+  }
+  
+  .contact-label {
+    color: white;
+    margin: 70px 0 0;
+    font-size: large;
+    text-align: center;
+  }
+
   .icon-button {
     display: inline-flex;
     align-items: center;
@@ -162,8 +183,13 @@ body {
     background-color: white;
     color: black;
   }
-  .footer {
-    color: white;
-    margin-top: 20px;
+  .icon-button.linkedin:hover {
+    background-color: white;
+    color: black;
   }
+  
+ 
+
+  
+
  
