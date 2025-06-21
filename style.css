@@ -62,23 +62,25 @@
 /* Scoreboard */
 #scoreboard {
     display: flex;
-    flex-wrap: wrap;            /* Allow wrapping if needed */
+    flex-wrap: wrap;                /* Allow wrapping if no space */
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
   }
 
-.scoreBox {
-  border: 2px solid white;
-  padding: 10px 20px;
-  color: white;
-  font-size: x-large;
-  background-color: black;
-  text-align: center;
-  min-width: 100px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-}
+  .scoreBox {
+    flex: 1 1 100px;                /* Grow, shrink, base size */
+    max-width: 150px;
+    min-width: 80px;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+    font-size: clamp(14px, 4vw, 20px);  /* Scales between 14px and 20px */
+    background-color: black;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
 
 #scoreboard p {
   margin: 5px;
