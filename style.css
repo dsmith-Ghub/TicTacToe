@@ -33,7 +33,7 @@
   color: white;
   background-color: black;
   font-size: x-large;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -49,13 +49,13 @@
 }
 
 body {
-  background-color: black;
+background-color: black;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
 }
 .square {
@@ -154,12 +154,12 @@ body {
     min-width: 200px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    margin-top: 70px;
+    margin-top: 30px;
   }
   
   .contact-label {
     color: white;
-    margin: 70px 0 0;
+    margin: 20px 0 0;
     font-size: large;
     text-align: center;
   }
@@ -188,7 +188,100 @@ body {
     color: black;
   }
   
- 
+  @media (max-width: 768px) {
+    #gameboard {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .square {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .Circle, .X {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .Circle {
+      border-width: 12px;
+    }
+  
+    .X:before {
+      width: 30%;
+    }
+  
+    .X:after {
+      height: 30%;
+    }
+  
+    #scoreboard {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .scoreBox {
+      font-size: large;
+      min-width: 150px;
+    }
+  
+    #info,
+    #restart,
+    .footerBox,
+    .contact-label {
+      font-size: medium;
+      text-align: center;
+    }
+  
+    .social-links {
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* Phones and very narrow screens */
+  @media (max-width: 480px) {
+    #gameboard {
+      width: 270px;
+      height: 270px;
+    }
+  
+    .square {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .Circle, .X {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .Circle {
+      border-width: 10px;
+    }
+  
+    .scoreBox {
+      font-size: medium;
+      min-width: 120px;
+    }
+  
+    .icon-button {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  
+    #restart {
+      padding: 8px 16px;
+      font-size: small;
+    }
+  
+    .footerBox {
+      font-size: small;
+    }
+  }
+  
 
   
 
