@@ -1,0 +1,169 @@
+#gameboard {
+  width: 600px;
+  height: 600px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px white;
+}
+#scoreboard {
+  display: flex;
+  gap: 20px; /* space between boxes */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.scoreBox {
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-size: x-large;
+  background-color: black;
+  text-align: center;
+  min-width: 100px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+#scoreboard p {
+  margin: 5px;
+}
+
+#info {
+  padding: 10px 20px;
+  color: white;
+  background-color: black;
+  font-size: x-large;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#restart {
+  color: yellow;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: 2px solid yellow;
+  background-color: black;
+  padding: 10px 20px;
+  font-size: large;
+  cursor: pointer;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: solid 6px black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Circle {
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  border: 25px solid rgb(36, 211, 80);
+  box-sizing: border-box;
+}
+
+.X {
+  height: 190px;
+  width: 190px;
+  position: relative;
+  transform: rotate(45deg);
+}
+.X:before,
+.X:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(219, 32, 64);
+}
+.X:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+.X:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+@keyframes pulse-highlight {
+  0% {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+}
+
+.win-highlight {
+  animation: pulse-highlight 3s ease-in-out infinite;
+}
+
+
+
+  #confetti-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/cloud.gif") center center / cover no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  body.confetti-active #confetti-background {
+    opacity: 1;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .icon-button.github:hover {
+    background-color: white;
+    color: black;
+  }
+  .footer {
+    color: white;
+    margin-top: 20px;
+  }
+ 
