@@ -61,12 +61,12 @@
 
 /* Scoreboard */
 #scoreboard {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
+    display: flex;
+    flex-wrap: wrap;            /* Allow wrapping if needed */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
 
 .scoreBox {
   border: 2px solid white;
